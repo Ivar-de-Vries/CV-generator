@@ -1,0 +1,31 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.loggedIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+#logo {
+  width: 80%;
+  height: auto;
+  margin: 2rem;
+}
+
+.headerText {
+  margin: 2rem;
+}
+

@@ -1,0 +1,19 @@
+<div class="updateSkillLevel">
+    <form [formGroup]="abstractClassForm" *ngIf="abstractClassForm" (submit)="submit()">
+        <section>
+            <div class="form">
+                <app-dropdown-form [objects]="skills" [name]="skillShowName" [id]="skill" formGroupName="skill"></app-dropdown-form>
+                <ng-container *ngFor="let input of inputList">
+                    <div class="input">
+                        <label for={{input.id}}>{{input.name}}*</label>
+                        <input type={{input.type}} id={{input.id}} name={{input.id}} formControlName={{input.id}} required>
+                    </div>
+                </ng-container>
+            </div>
+        </section>
+        <div class="flex-row space-between">
+            <button class="grayed" (click)="goBack()">Ga terug</button>
+            <button [disabled]="abstractClassForm.invalid" [class.disabled]="abstractClassForm.invalid">Gegevens aanmaken</button>
+        </div>
+    </form>
+</div>

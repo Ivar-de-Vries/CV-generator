@@ -1,0 +1,26 @@
+<div id="projectparticipations">
+  <h2>Projects</h2>
+  <div *ngIf="values?.length == 0">
+    <h3>Je hebt nog geen projecten.</h3>
+  </div>
+  <div class="component" *ngFor="let projectParticipations of values">
+    <div>
+      <h3 class="name">{{projectParticipations.project.name}}</h3>
+    </div>
+    <div class="flex-row">
+      <p>{{projectParticipations.beginDate}}</p>
+      <span>-</span>
+      <p>{{projectParticipations.endDate}}</p>
+      <div class="aanpassen">
+        <img src="assets\svg\edit2_111039.svg" alt="Edit" (click)="updateNavigation(projectParticipations)"/>
+        <img src="assets\svg\close_111152.svg" alt="X" (click)="delete(projectParticipations)"/>
+      </div>
+    </div>
+    <div>
+      {{projectParticipations.description}}
+    </div>
+  </div>
+  <div class="flex-row knoppen">
+    <a routerLink="./projectparticipations/create"><button>Toevoegen</button></a>
+  </div>
+</div>

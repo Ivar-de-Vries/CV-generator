@@ -1,0 +1,32 @@
+.errorMessage {
+  margin-bottom: 1rem;
+  padding: 10px 20px;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  position: relative;
+
+  * {
+    display: inline-block;
+  }
+
+  img {
+    height: 19px;
+    width: 19px;
+    top: 50%;
+    transform: translateY(25%);
+  }
+  img:hover {
+      cursor: pointer;
+  }
+}
+
+.errorHolder {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+

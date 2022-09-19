@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="employee-form.component.scss">
+<section>
+  <div class="employeeForm" [formGroup]="employeeForm">
+    <ng-container *ngFor="let input of inputList">
+      <div class="input">
+        <label for={{input.id}}>{{input.name}}*</label>
+        <input type={{input.type}} id={{input.id}} name={{input.id}} formControlName={{input.id}} required>
+      </div>
+    </ng-container>
+    <app-dropdown-form [objects]="genders" [name]="geslacht" [id]="gender" formGroupName="gender"></app-dropdown-form>
+    <div class="checkbox input">
+      <input type="checkbox" id="driverLicense" name="driverLicense" formControlName="driverLicense">
+      <label for="driverLicense">Ik heb rijbewijs B</label>
+    </div>
+    <div class="input">
+      <label for="description">Omschrijving*</label>
+      <textarea id="description" name="description" rows="4" cols="50" formControlName="description" required></textarea>
+    </div>
+  </div>
+</section>

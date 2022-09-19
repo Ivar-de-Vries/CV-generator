@@ -1,0 +1,12 @@
+<div class="updateLanguageLevel">
+    <form class="languageForm" [formGroup]="abstractClassForm" *ngIf="abstractClassForm" (submit)="submit()">
+        <section>
+            <app-dropdown-form [objects]="languages" [name]="taal" [id]="language" formGroupName="language"></app-dropdown-form>
+            <app-dropdown-form *ngFor="let dropdown of dropDownList" [objects]="languageSkills" [name]="dropdown.name" [id]="dropdown.id" formGroupName={{dropdown.formGroup}}></app-dropdown-form>
+        </section>
+        <div class="flex-row space-between">
+            <button class="grayed" (click)="goBack()">Ga terug</button>
+            <button [disabled]="abstractClassForm.invalid" [class.disabled]="abstractClassForm.invalid">Gegevens aanmaken</button>
+        </div>
+    </form>
+</div>

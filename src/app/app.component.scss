@@ -1,0 +1,42 @@
+.container {
+  font-family:Ubuntu, serif;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 20%);
+  grid-template-areas:
+        "header header header header"
+        "navigation main main main"
+        "navigation main main main"
+        "navigation footer footer footer";
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  background-color: white;
+  border: 1px solid #ABDBEB;
+}
+
+.navigation {
+  grid-area: navigation;
+  display: grid;
+  width: 250px;
+  background-color: white;
+  border: 1px solid #ABDBEB;
+  border-top: 0;
+}
+
+.main {
+  grid-area: main;
+  height: auto;
+  grid-column-start: 2;
+  display: grid;
+  background-color: white;
+  margin: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  background-color: white;
+  margin: 1rem 1rem 0;
+}

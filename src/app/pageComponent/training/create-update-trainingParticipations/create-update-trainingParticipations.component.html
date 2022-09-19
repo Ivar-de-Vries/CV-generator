@@ -1,0 +1,20 @@
+<div class="updateTrainingParticipation">
+  <form [formGroup]="abstractClassForm" *ngIf="abstractClassForm" (submit)="submit()">
+    <section>
+      <div class="trainingParticipationForm">
+        <ng-container *ngFor="let input of inputList">
+          <div class="input">
+            <label for={{input.id}}>{{input.name}}*</label>
+            <input type={{input.type}} id={{input.id}} name={{input.id}} formControlName={{input.id}} [max]="getMaxDate()" required>
+          </div>
+        </ng-container>
+        <app-dropdown-form [objects]="trainings" [name]="trainingShowName" [id]="training" formGroupName="training"></app-dropdown-form>
+      </div>
+    </section>
+    <div class="flex-row space-between">
+      <button class="grayed" (click)="goBack()">Ga terug</button>
+      <button [disabled]="abstractClassForm.invalid" [class.disabled]="abstractClassForm.invalid">Gegevens aanpassen</button>
+    </div>
+  </form>
+</div>
+

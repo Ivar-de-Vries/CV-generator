@@ -1,0 +1,18 @@
+<div class="login">
+  <form>
+    <div class="loginForm">
+      <div class="input">
+        <label for="emailAddress">E-mailadres</label>
+        <input type="text" id="emailAddress" [(ngModel)]="emailAddress" name="emailaddress" placeholder="e-mailadres">
+      </div>
+      <div class="input">
+        <label for="password">Wachtwoord</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="wachtwoord">
+      </div>
+      <div class="flex-row space-between">
+        <button type="submit" (click)=handleLogin()>Log In</button>
+      </div>
+    </div>
+  </form>
+</div>
+

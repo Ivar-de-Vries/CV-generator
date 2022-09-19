@@ -1,0 +1,41 @@
+.certificateForm {
+  font-family:Ubuntu, serif;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.input label{
+  font-size: 12px;
+  font-weight: 700;
+  color: #7C7C7C;
+  margin: 0;
+}
+
+.input input {
+  border: none;
+  border-bottom: 1px solid #E30C31;
+  font-size: 14px;
+  color: #000C6E;
+  background-color: #d5edf5;
+  box-shadow: none;
+  outline: none;
+  padding: 4px;
+  margin: 0;
+}
+
+.checkbox {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: row;
+}
+
+.checkbox input {
+  align-self: center;
+  margin-right: 0.5rem;
+}
+

@@ -1,0 +1,9 @@
+<div class="updateEmployee">
+  <form [formGroup]="updateEmployeeForm" *ngIf="updateEmployeeForm" (submit)="updateEmployee()">
+    <app-employee-form formGroupName="employeeForm"></app-employee-form>
+    <div class="flex-row space-between">
+      <button class="grayed" (click)="goBack()">Ga terug</button>
+      <button [disabled]="updateEmployeeForm.invalid" [class.disabled]="updateEmployeeForm.invalid" class="button">Gegevens aanpassen</button>
+    </div>
+  </form>
+</div>

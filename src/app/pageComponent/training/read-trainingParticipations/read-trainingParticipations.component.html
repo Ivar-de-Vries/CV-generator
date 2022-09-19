@@ -1,0 +1,24 @@
+<div id="trainings">
+  <h2>Trainingen</h2>
+  <div *ngIf="values?.length == 0">
+    <h3>Je hebt nog geen trainingen.</h3>
+  </div>
+  <div class="component" *ngFor="let trainingParticipation of values">
+    <div>
+      <h3 class="name">{{trainingParticipation.training.name}}</h3>
+    </div>
+    <div class="flex-row">
+      <p>{{trainingParticipation.beginDate}}</p>
+      <span>-</span>
+      <p>{{trainingParticipation.endDate}}</p>
+      <div class="aanpassen">
+        <img src="assets\svg\edit2_111039.svg" alt="Edit" (click)="updateNavigation(trainingParticipation)"/>
+        <img src="assets\svg\close_111152.svg" alt="X" (click)="delete(trainingParticipation)"/>
+      </div>
+    </div>
+  </div>
+  <div class="flex-row knoppen">
+    <a routerLink="./training/create"><button>Toevoegen</button></a>
+  </div>
+
+</div>

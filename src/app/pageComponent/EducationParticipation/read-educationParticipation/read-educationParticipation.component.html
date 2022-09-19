@@ -1,0 +1,24 @@
+<div id="educations" class="educationParticipation">
+  <h2>Opleidingen</h2>
+  <div *ngIf="values?.length == 0">
+    <h3>Je hebt nog geen opleidingen.</h3>
+  </div>
+  <div class="component" *ngFor="let educationParticipation of values" >
+    <div>
+      <h3 class="name">{{educationParticipation.education.name}}</h3>
+    </div>
+    <div class="flex-row">
+      <p>{{educationParticipation.beginDate}}</p>
+      <span>-</span>
+      <p>{{educationParticipation.endDate}}</p>
+      <div class="aanpassen">
+        <img src="assets\svg\edit2_111039.svg" alt="Edit" (click)="updateNavigation(educationParticipation)"/>
+        <img src="assets\svg\close_111152.svg" alt="X" (click)="delete(educationParticipation)"/>
+      </div>
+    </div>
+  </div>
+  <div class="flex-row knoppen">
+    <a routerLink="./educationparticipation/create"><button>Toevoegen</button></a>
+  </div>
+</div>
+

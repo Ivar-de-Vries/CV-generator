@@ -1,0 +1,12 @@
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+<header>
+  <div class="header">
+    <a href="https://www.weareida.digital/be-en.html"><img src="https://www.weareida.digital/content/dam/ida/logo/logo-ida.png" alt="logo" id="logo" /></a>
+    <h1 class="headerText">Welcome to IDA CV Management</h1>
+  </div>
+  <div class="loggedIn" *ngIf="loggedIn">
+    <p class="loginText">Logged in as:</p>
+    <p class="user">{{user}}</p>
+    <button (click)="logOut()">Log out</button>
+  </div>
+</header>

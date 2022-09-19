@@ -1,0 +1,35 @@
+<div id="language">
+  <div class="component">
+    <div class="Language">
+      <h2 id="languageTitle">Talen</h2>
+    </div>
+    <div *ngIf="values?.length == 0">
+      <h3>Je hebt nog geen talen.</h3>
+    </div>
+  </div>
+  <div class="component" *ngIf="values?.length != 0">
+    <div class="table">
+      <thead>
+      <tr>
+        <th></th>
+        <th class="title">SPREKEN</th>
+        <th class="title">LEZEN</th>
+        <th class="title">SCHRIJVEN</th>
+        <th class="image-title"></th>
+        <th class="image-title"></th>
+      </tr>
+      <tr *ngFor="let language of values">
+        <td class="language">{{language.language.name.toUpperCase()}}</td>
+        <td class="value">{{language.speakingLevel.value}}</td>
+        <td class="value">{{language.readingLevel.value}}</td>
+        <td class="value">{{language.writingLevel.value}}</td>
+        <td align="center" class="clickable" (click)="updateNavigation(language)"><img src="assets\svg\edit2_111039.svg" alt="Edit"/></td>
+        <td align="center" class="clickable" (click)="delete(language)"><img src="assets\svg\close_111152.svg" alt="X"/></td>
+      </tr>
+      </thead>
+    </div>
+  </div>
+  <div class="flex-row knoppen">
+    <a routerLink="./languagelevel/create"><button>Toevoegen</button></a>
+  </div>
+</div>

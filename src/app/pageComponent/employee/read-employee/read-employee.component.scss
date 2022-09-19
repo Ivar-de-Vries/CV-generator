@@ -1,0 +1,59 @@
+.employee {
+  font-family: Ubuntu, serif;
+  border: 1px solid #ABDBEB;
+  padding: 1rem;
+}
+
+.employee .knoppen {
+  justify-content: flex-end;
+}
+
+.employee .component {
+  max-width: 70%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.employee button {
+  margin: 0;
+}
+
+#firstname {
+  color: #cd052c;
+  margin-right: 8px;
+}
+
+#lastname {
+  color: #9d9d9c;
+}
+
+#currentJob {
+  color: #9d9d9c;
+}
+
+#description {
+  min-width: 30rem;
+  margin-right: 0.5rem;
+}
+
+#persoonlijk {
+  min-width: 20rem;
+  margin-left: 0.5rem;
+}
+
+#persoonlijk .text{
+  margin-right: 8px;
+}
+
+#persoonlijk #birthdate,#gender,#driverLicense,#city,#emailAddress {
+  color: #800000;
+}
+
+#description p {
+  text-align: left;
+}
+
+
+
+
+

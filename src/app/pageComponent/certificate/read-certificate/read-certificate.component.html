@@ -1,0 +1,27 @@
+<!-- <div class="Certificate" *ngIf="!certificate">
+    Uw certificaten zijn nog niet ingeladen.
+</div> -->
+<div id="certifications" class="Certificate">
+    <h2>Certificaten</h2>
+    <div *ngIf="values?.length == 0">
+      <h3>Je hebt nog geen certificaten.</h3>
+    </div>
+    <div *ngFor="let certificate of values" class="component">
+        <div>
+            <h3 class="name">{{certificate.name}}</h3>
+        </div>
+        <div>
+            <h4 class="subname name">{{certificate.courseName}}</h4>
+          </div>
+        <div class="flex-row">
+            <p>{{certificate.acquired}}</p>
+            <div class="aanpassen">
+                <img src="assets\svg\edit2_111039.svg" alt="Edit" (click)="updateNavigation(certificate)" />
+                <img src="assets\svg\close_111152.svg" alt="X" (click)="delete(certificate)" />
+            </div>
+        </div>
+    </div>
+    <div class="flex-row knoppen">
+        <a routerLink="./certificate/create"><button>Toevoegen</button></a>
+    </div>
+</div>

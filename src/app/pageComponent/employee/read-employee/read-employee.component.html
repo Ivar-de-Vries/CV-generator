@@ -1,0 +1,43 @@
+<div class="employee" *ngIf="!employee" >
+  Uw algemene gegevens zijn nog niet ingeladen.
+</div>
+<div id="employee" class="employee" *ngIf="employee">
+  <div class="component">
+    <div id="fullName" class="flex-row">
+      <h1 id="firstname">{{employee.firstname}} </h1>
+      <h1 id="lastname">{{employee.lastname}}</h1>
+    </div>
+  </div>
+  <div class="flex-row component">
+    <div id="description">
+      <h3>Over</h3>
+      <p>{{employee.description}}</p>
+    </div>
+    <div id="persoonlijk">
+      <h3>Persoonlijke gegevens</h3>
+      <div class="flex-row">
+        <p class="text">E-mailadres:</p>
+        <p id="emailAddress">{{employee.emailAddress}}</p>
+      </div>
+      <div class="flex-row">
+        <p class="text">Geboortedatum:</p>
+        <p id="birthdate">{{employee.birthdate}}</p>
+      </div>
+      <div class="flex-row">
+        <p class="text">Geslacht:</p>
+        <p id="gender">{{displayGender()}}</p>
+      </div>
+      <div class="flex-row">
+        <p class="text">Woonplaats:</p>
+        <p id="city">{{employee.city}}</p>
+      </div>
+      <div class="flex-row">
+        <p class="text">Rijbewijs:</p>
+        <p id="driverLicense">{{displayDriverLicense()}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="flex-row knoppen">
+    <a routerLink="./update"><button>Aanpassen</button></a>
+  </div>
+</div>

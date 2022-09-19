@@ -1,0 +1,26 @@
+<div class="SkillLevel" *ngIf="!values">
+    Uw vaardigheden zijn nog niet ingeladen.
+</div>
+<div id="skills" *ngIf="values">
+  <h2>Vaardigheden</h2>
+  <div *ngIf="values?.length == 0">
+    <h3>Je hebt nog geen skills.</h3>
+  </div>
+  <div class="component">
+    <div>
+      <div class="flex-row" *ngFor="let skillLevel of values">
+        <p>{{skillLevel.skill.name}}</p>
+        <span>-</span>
+        <p>{{skillLevel.score}}</p>
+        <div class="aanpassen">
+          <img class="actionIcon" src="assets\svg\edit2_111039.svg" alt="Edit" (click)="updateNavigation(skillLevel)">
+          <img class="actionIcon" src="assets/svg/close_111152.svg" alt="X" (click)="delete(skillLevel)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-row knoppen">
+    <a routerLink="./skill/create"><button>Toevoegen</button></a>
+  </div>
+</div>
+

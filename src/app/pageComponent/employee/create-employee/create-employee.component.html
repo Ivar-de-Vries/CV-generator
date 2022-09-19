@@ -1,0 +1,9 @@
+<div class="createEmployee">
+  <form [formGroup]="createEmployeeForm" (submit)="createEmployee()">
+    <app-employee-form formGroupName="employeeForm"></app-employee-form>
+    <div class="flex-row space-between">
+      <button class="grayed" (click)="logOut()">Log uit</button>
+      <button [disabled]="createEmployeeForm.invalid" [class.disabled]="createEmployeeForm.invalid">Gegevens aanmaken</button>
+    </div>
+  </form>
+</div>

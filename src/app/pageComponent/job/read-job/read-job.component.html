@@ -1,0 +1,28 @@
+<div id="jobs">
+    <h2>Banen</h2>
+    <div *ngIf="values?.length == 0">
+      <h3>Je hebt nog geen Banen.</h3>
+    </div>
+    <div class="component" *ngFor="let job of values">
+      <div>
+        <h3 class="name">{{job.function}}</h3>
+      </div>
+      <div>
+        <h4 class="subname name">{{job.company.name}}</h4>
+      </div>
+      <div class="flex-row">
+        <p>{{job.beginDate}}</p>
+        <span>-</span>
+        <p>{{job.endDate}}</p>
+        <div class="aanpassen">
+          <img src="assets\svg\edit2_111039.svg" alt="Edit" (click)="updateNavigation(job)"/>
+          <img src="assets\svg\close_111152.svg" alt="X" (click)="delete(job)"/>
+        </div>
+      </div>
+    </div>
+    <div class="flex-row knoppen">
+      <a routerLink="./jobs/create"><button>Toevoegen</button></a>
+    </div>
+  
+  </div>
+  

@@ -1,0 +1,6 @@
+<div class="errorHolder">
+  <div class="errorMessage" *ngFor="let errorMessage of errorMessages; index as i">
+    <p>{{errorMessage}}</p>
+    <img src="assets/svg/close_111152.svg" alt="X" (click)="clearMessage(i)">
+  </div>
+</div>

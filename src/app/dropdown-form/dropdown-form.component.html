@@ -1,0 +1,11 @@
+<div class="input" [formGroup]="dropdownForm">
+  <label for={{id}}>{{name}}*</label>
+  <br>
+  <select id={{id}} name={{id}} formControlName={{id}} required>
+    <option *ngFor="let object of objects" [value]="object.value">{{object.name}}</option>
+  </select>
+  <br>
+</div>
+
+
+

@@ -1,0 +1,340 @@
+/* To get a uniform style more values are hardcoded than normally is recomended */
+#content {
+  width: 595px;
+  height: 842px;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.employee {
+  font-family: Ubuntu, serif;
+  padding: 1rem 0;
+  width: 85%;
+}
+
+.employee .knoppen {
+  justify-content: flex-end;
+}
+
+.employee .component {
+  max-width: 85%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.employee button {
+  margin: 0;
+}
+
+#firstname {
+  color: #cd052c;
+  margin-right: 8px;
+}
+
+#lastname {
+  color: #9d9d9c;
+}
+
+#currentJob {
+  color: #9d9d9c;
+}
+
+#description {
+  max-width: 85%;
+}
+
+#persoonlijk {
+  min-width: 35rem;
+  max-width: 85%;
+}
+
+#persoonlijk .text{
+  margin-right: 8px;
+}
+
+#persoonlijk #birthdate,#gender,#driverLicense,#city,#emailAddress {
+  color: #800000;
+}
+
+#description p {
+  text-align: left;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  color: #7e8185;
+  font-size: 26px;
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #7e8185;
+}
+
+.honoraryH2 {
+  border-bottom: 1px dashed #7e8185;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #7e8185;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  font-size: 16px;
+  color: #7e8185;
+  margin: 0;
+}
+
+
+
+.listing {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listing > li {
+  p {
+    margin-top: 5px;
+  }
+  img {
+    margin-top: 6px;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  p, span {
+    text-align: center;
+  }
+}
+
+.grid_employee {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.space-between {
+  margin: 0;
+  justify-content: space-between;
+}
+
+.createEmployee, .updateEmployee, .createEducationParticipation, .updateEducationParticipation, .createTrainingParticipation, .updateTrainingParticipation, .createCertificate, .updateCertificate, .createSkills, .updateSkills {
+  font-family:Ubuntu, serif;
+  margin: 1rem;
+  min-width: 28rem;
+  max-width: 28rem;
+}
+
+button{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 8px 32px;
+  width: 13rem;
+  background-color: #E30C31;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #d94040;
+}
+
+.back{
+  background-color: #9d9d9c;
+}
+
+.back:hover {
+  background-color: #adadad;
+}
+
+.disabled {
+  background-color: whitesmoke;
+  color: lightgray;
+  cursor: auto;
+}
+
+.disabled:hover {
+  background-color: whitesmoke;
+  color: lightgray;
+}
+
+.knoppen {
+  justify-content: flex-end;
+  margin: 0;
+}
+
+
+.knoppen button {
+  margin: 0;
+}
+
+
+#educations {
+  font-family: Ubuntu, serif;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+.name {
+  color: #c00000;
+  padding: 0;
+  margin: 0;
+}
+
+.subname {
+  font-weight: normal;
+}
+#certifications {
+  width: 80%;
+}
+
+#trainings {
+  width: 80%;
+  padding-top: 1rem;
+}
+
+span {
+  color: #7e8185;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.component {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.aanpassen {
+  margin-left: 1rem;
+}
+#language {
+  font-family: Ubuntu, serif;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
+table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+thead {
+  width: 100%;
+}
+
+table .title {
+  background-color: #b0212c;
+  color: white;
+  border: 0.25rem solid #ffffff;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  font-weight: bold;
+}
+
+#language {
+  table {
+    width: 80%;
+  }
+  th {
+    width: 20px;
+  }
+}
+
+table .language {
+  background-color: #b0212c;
+  color: white;
+  border: 0.25rem solid #ffffff;
+  text-align: left;
+  padding-right: 6rem;
+  //padding-left: 0.25rem;
+  font-weight: bold;
+}
+
+table .value {
+  background-color: #ededed;
+  color: #7e8185;
+  border: 0.25rem solid #ffffff;
+  text-align: center;
+}
+
+table img {
+  background-color: #ededed;
+  color: #7e8185;
+  border: 0.25rem solid #ffffff;
+  width: 3rem;
+  height: 1rem;
+}
+
+.image-title {
+  width: 3rem;
+}
+
+
+.projectMargin {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #7e8185;
+}
+
+.projectMargin > * {
+  margin: 2px;
+}
+
+.projectMargin:last-child {
+  border-bottom: 0px;
+}
+
+#projects {
+  width: 80%;
+  padding-top: 1rem;
+}
+
+
+#skills {
+  width: 80%;
+  .component {
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 5%;
+  }
+}
+
+.flex-stretched {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 300px;
+  opacity: 0.5;
+}
+
+#buttonLayout {
+  width: 85%;
+  margin-left :5px;
+  display:inline-block;
+}

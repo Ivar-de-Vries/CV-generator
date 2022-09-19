@@ -1,0 +1,178 @@
+<div id="thisIsPrint" #content>
+  <div id="employee" class="employee" *ngIf="employee">
+    <div class="component flex-end">
+      <div>
+        <div id="fullName" class="flex-row">
+          <h1 id="firstname">{{employee.firstname.toUpperCase()}} </h1>
+          <h1 id="lastname">{{employee.lastname.toUpperCase()}}</h1>
+        </div>
+      </div>
+      <div>
+        <img id="logo" src="assets\img\ida_full_logo_pdf.png" alt="ida mediafoundry" />
+      </div>
+    </div>
+
+    <div class="grid_employee component">
+      <div id="description">
+        <h3 class="honoraryH2">OVER</h3>
+        <p>{{employee.description}}</p>
+      </div>
+      <div id="persoonlijk">
+        <h3 class="honoraryH2">PERSOONLIJKE GEGEVENS</h3>
+        <div class="flex-row">
+          <p class="text">E-mailadres:</p>
+          <p id="emailAddress">{{employee.emailAddress}}</p>
+        </div>
+        <div class="flex-row">
+          <p class="text">Geboortedatum:</p>
+          <p id="birthdate">{{employee.birthdate}}</p>
+        </div>
+        <div class="flex-row">
+          <p class="text">Geslacht:</p>
+          <p id="gender">{{displayGender()}}</p>
+        </div>
+        <div class="flex-row">
+          <p class="text">Woonplaats:</p>
+          <p id="city">{{employee.city}}</p>
+        </div>
+        <div class="flex-row">
+          <p class="text">Rijbewijs:</p>
+          <p id="driverLicense">{{displayDriverLicense()}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="educations" class="educationParticipation" *ngIf="educationParticipation">
+    <div *ngIf="educationParticipation.length > 0">
+      <h2>OPLEIDINGEN</h2>
+      <div class="component" *ngFor="let educationParticipation of educationParticipation">
+        <div class="flex-row">
+          <h3 class="name">{{educationParticipation.education.name.toUpperCase() + ', '}}</h3>
+        </div>
+        <div class="flex-row">
+          <span>Begin datum </span>
+          <p>{{educationParticipation.beginDate}}</p>
+          <span>-</span>
+          <span>Eind datum </span>
+          <p>{{educationParticipation.endDate}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="certifications" class="Certificate" *ngIf="certificate">
+    <div *ngIf="certificate.length > 0">
+      <h2>Certificaten</h2>
+      <div *ngFor="let certificate of certificate" class="component">
+        <div class="flex-row">
+          <h3 class="name">{{certificate.name.toUpperCase()}}</h3>
+        </div>
+        <div>
+          <h4 class="subname name">{{certificate.courseName}}</h4>
+        </div>
+        <div>
+          <p>{{certificate.acquired}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="trainings" *ngIf="trainingParticipations">
+    <div *ngIf="trainingParticipations.length > 0">
+      <h2>Trainingen</h2>
+      <div class="component" *ngFor="let trainingParticipation of trainingParticipations">
+        <div class="flex-row">
+          <h3 class="name">{{trainingParticipation.training.name.toUpperCase() + ", "}}</h3>
+        </div>
+        <div class="flex-row">
+          <p>{{trainingParticipation.beginDate}}</p>
+          <span>-</span>
+          <p>{{trainingParticipation.endDate}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="language" *ngIf="languages">
+    <div *ngIf="languages.length > 0">
+      <div class="component">
+        <div class="Language">
+          <h2 id="languageTitle">Talen</h2>
+          <div class="component" *ngIf="languages?.length != 0">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="title">SPREKEN</th>
+                  <th class="title">LEZEN</th>
+                  <th class="title">SCHRIJVEN</th>
+                </tr>
+                <tr *ngFor="let language of languages">
+                  <td class="language">{{language.language.name}}</td>
+                  <td class="value">{{language.speakingLevel.value}}</td>
+                  <td class="value">{{language.readingLevel.value}}</td>
+                  <td class="value">{{language.writingLevel.value}}</td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="skills" *ngIf="skillLevels">
+    <div *ngIf="skillLevels.length > 0">
+      <h2>Vaardigheden</h2>
+      <div class="component">
+        <div class="flex-stretched" *ngFor="let skillLevel of skillLevels">
+          <p>{{skillLevel.skill.name}}</p>
+          <div [innerHtml]="toRating(skillLevel.score)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="projects" *ngIf="projects">
+    <div *ngIf="projects.length > 0">
+      <h2>PROJECTEN</h2>
+      <div class="component">
+        <div *ngFor="let project of projects" class="projectMargin">
+          <div>
+            <h3 class="name">{{project.project.name}}</h3>
+          </div>
+          <div class="flex-row">
+            <p>{{project.beginDate}}</p>
+            <span>-</span>
+            <p>{{project.endDate}}</p>
+          </div>
+          <div>
+            {{project.description}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="job" *ngIf="jobs">
+    <div *ngIf="jobs.length > 0">
+      <h2>BANEN</h2>
+      <div class="component" *ngFor="let job of jobs">
+        <div>
+          <h3 class="name">{{job.function}}</h3>
+        </div>
+        <div>
+          <h4 class="subname name">{{job.company.name}}</h4>
+        </div>
+        <div class="flex-row">
+          <p>{{job.beginDate}}</p>
+          <span>-</span>
+          <p>{{job.endDate}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<app-download></app-download>
