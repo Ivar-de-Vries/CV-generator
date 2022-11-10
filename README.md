@@ -1,20 +1,14 @@
-# Stappen voor meewerken met project.
-1. Installeer node en angular.
-    1. Download en installeer Node.js. Zorg er voor dat de checkbox voor extra software NIET aangevinkt is.
-    2. Voer in CMD uit ``` npm install -g @angular/cli ```
-2. Clone de repository.
-3. Open CMD in een apparte map en voer ``` ng new cv-generator-front-end ``` uit.
-    1. Bij de vraag of je routing wil gebruiken. Voer ``` Y ``` in.
-    2. Bij de vraag welke type stijl type te gebruiken selecteer je ``` SCSS ``` (Gebruik je pijltjestoetsen).
-4. Kopieer de inhoud van de gegenereerde map naar je repository.
-5. Er MOET worden gevraagd of je bestanden wil overschrijven. Druk op overslaan.
-    1. Als je toch op overschrijven hebt gedrukt, gebruik dan git om de changes te discarden.
-6. Open CMD in de map van je project en gebruik ``` ng serve ``` om de server te starten.
-7. Ga naar localhost:4200. Als je een pagina ziet, dan is dit gelukt.
-8. Als alles nu werkt. Verwijder dan de map die je in stap 3 hebt aangemaakt.
-9. Genereren van een CV.
-    1. Hiervoor heb je twee npm voor nodig, JsPdf en html2canvas.
-    2. Install beide npm in de CMD via ```npm install jspdf --save``` en ```npm install --save html2canvas```
+# Steps to setup project
+1. Download and install Node.js and Angular
+    1. When Downloading and Installing Node.js make sure not to download the additional software.
+    2. Open the command prompt and execute ``` npm install -g @angular/cli ```
+2. Clone this repository
+3. Open the command prompt in an empty folder and execute ``` ng new cv-generator-front-end ```
+4. Copy the files you have just created to you clipboard and paste them in the repository.
+5. When it ask if you would like to change the files press skip all.
+6. Open the command promot in the repository folder and execute ``` ng serve ``` to boot the the server
+7. Go to localhost:4200 if a page appears it has worked. If not discard the changed in git and try again.
+8. Remove the folder made in step 3
 
 
 # Angular Readme
