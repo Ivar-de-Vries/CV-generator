@@ -1,13 +1,13 @@
 # Steps to setup project
 1. Download and install Node.js and Angular.
     1. When downloading and installing Node.js make sure not to download the additional software.
-    2. Open the command prompt and execute ``` npm install -g @angular/cli ```
+    2. Open the command prompt and execute ``` npm install -g @angular/cli ```.
 2. Clone this repository.
-3. Open the command prompt in an empty folder and execute ``` ng new cv-generator-front-end ```
+3. Open the command prompt in an empty folder and execute ``` ng new cv-generator-front-end ```.
 4. Copy the files you have just created to your clipboard and paste them in the repository.
 5. When it asks if you would like to change the files, press skip all.
 6. Open the command prompt in the repository folder and execute ``` ng serve ``` to boot the server.
-7. Go to localhost:4200 if a page loads the setup is complete, if not discard the changes in git and try again.
+7. Go to localhost:4200. If a page loads the setup is complete, if not discard the changes in git and try again.
 8. Remove the folder made in step 3.
 
 
