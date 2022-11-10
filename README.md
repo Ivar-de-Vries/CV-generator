@@ -6,9 +6,9 @@
 3. Open the command prompt in an empty folder and execute ``` ng new cv-generator-front-end ```
 4. Copy the files you have just created to you clipboard and paste them in the repository.
 5. When it ask if you would like to change the files press skip all.
-6. Open the command promot in the repository folder and execute ``` ng serve ``` to boot the the server
+6. Open the command promot in the repository folder and execute ``` ng serve ``` to boot the the server.
 7. Go to localhost:4200 if a page appears it has worked. If not discard the changed in git and try again.
-8. Remove the folder made in step 3
+8. Remove the folder made in step 3.
 
 
 # Angular Readme
